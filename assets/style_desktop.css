@@ -8,7 +8,8 @@
   }
   header {
     padding: 24px 84px;
-    position: fixed;
+    position: sticky;
+    top: 0px;
     width: 100%;
   }
 
@@ -115,16 +116,16 @@
 
   /* content image */
 
-  #aboutme-section.aboutme-section-image {
+  #aboutme-section .aboutme-section-image {
     width: 50%;
   }
-  #aboutme-section .aboutme-section-image img {
+  #aboutme-section.aboutme-section-image img {
     width: 100%;
   }
 
   #aboutme-section .aboutme-section-content {
     width: 50%;
-    margin-left: 40px;
+    /* margin-left: 40px; */
   }
 
   .content-text h2 {
@@ -200,7 +201,7 @@
     .section-content {
       display: flex;
       flex-direction: row;
-      margin-top: 40px;
+      margin-top: 106px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 42px;
