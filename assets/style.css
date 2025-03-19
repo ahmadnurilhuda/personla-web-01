@@ -193,8 +193,15 @@ header .header-nav a:hover {
 
 /* content image */
 
+#aboutme-section .aboutme-section-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 #aboutme-section .aboutme-section-image img {
-  width: 100%;
+  width: 70%;
   margin-top: 48px;
 }
 
@@ -233,6 +240,7 @@ header .header-nav a:hover {
   padding: 40px 24px;
   min-height: 4;
 }
+
 #project-section .section-content {
   display: flex;
   flex-direction: column;
@@ -341,13 +349,105 @@ header .header-nav a:hover {
       p {
         font-size: 18px;
         font-weight: 600;
-        
       }
 
       &:hover {
         border-bottom: 2px solid #5e3bee;
         transition: 0.3s;
         color: #5e3bee;
+      }
+    }
+  }
+}
+
+/* TESTIMONI */
+
+#testi-section {
+  margin-top: 40px;
+  padding: 40px 24px;
+  background-color: #f5fcff;
+
+  .content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .section-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .testi-item {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 43px;
+    border: 1px solid #006b6a;
+    border-radius: 10px;
+
+    .rating {
+      width: 50%;
+      display: flex;
+      gap: 4px;
+
+      svg {
+        color: #006b6a;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0%;
+    }
+
+    .reviewer {
+      display: flex;
+      flex-direction: row;
+      /* justify-content: space-between; */
+      align-items: center;
+      gap: 12px;
+
+      .container-image {
+        /* position: relative; */
+        background-color: #006b6a;
+        width: 74px;
+        height: 74px;
+        border-radius: 100%;
+        /* border: 1px solid black; */
+
+        img {
+          /* position: absolute; */
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          border-radius: 100%;
+        }
+      }
+
+      .name-details {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        h4 {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 150%;
+          letter-spacing: 0%;
+        }
+        p {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 150%;
+          letter-spacing: 0%;
+        }
       }
     }
   }

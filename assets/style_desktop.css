@@ -1,6 +1,15 @@
 @media (min-width: 768px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #282938;
+    font-family: "Roboto", sans-serif;
+  }
   header {
     padding: 24px 84px;
+    position: fixed;
+    width: 100%;
   }
 
   header nav.header-nav {
@@ -65,6 +74,11 @@
     letter-spacing: 0%;
   }
 
+  #skills-section {
+    padding: 134px 84px;
+    min-height: 4;
+  }
+
   #skills-section .section-content {
     display: flex;
     flex-direction: row;
@@ -99,9 +113,9 @@
     align-items: center;
   }
 
-  /* content image */ 
-  
-  #aboutme-section .aboutme-section-image {
+  /* content image */
+
+  #aboutme-section.aboutme-section-image {
     width: 50%;
   }
   #aboutme-section .aboutme-section-image img {
@@ -115,14 +129,10 @@
 
   .content-text h2 {
     font-size: 64px;
-
   }
   .content-text p {
     font-size: 24px;
   }
-
-
-
 
   #project-section {
     padding: 148px 84px;
@@ -133,16 +143,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items:end;
-  
-    .content-text{
+    align-items: end;
+
+    .content-text {
       display: flex;
       flex-direction: column;
       gap: 32px;
     }
   }
 
-  #project-section .section-content{
+  #project-section .section-content {
     display: flex;
     flex-direction: row;
     margin-top: 106px;
@@ -175,8 +185,92 @@
     font-size: 18px;
   }
 
+  /* TESTIMONI */
 
+  #testi-section {
+    padding: 134px 84px;
+    background-color: #f5fcff;
 
+    .content-text {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .section-content {
+      display: flex;
+      flex-direction: row;
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 42px;
+    }
+
+    .testi-item {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding: 43px;
+      border: 1px solid #006b6a;
+      border-radius: 10px;
+
+      .rating {
+        width: 50%;
+        display: flex;
+        gap: 4px;
+
+        svg {
+          color: #006b6a;
+        }
+      }
+      p {
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 150%;
+        letter-spacing: 0%;
+      }
+
+      .reviewer {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        .container-image {
+          background-color: #006b6a;
+          width: 74px;
+          height: 74px;
+          border-radius: 100%;
+          /* border: 1px solid black; */
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 100%;
+          }
+        }
+
+        .name-details {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+
+          h4 {
+            font-weight: 600;
+            font-size: 22px;
+            line-height: normal !important;
+            letter-spacing: 0%;
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: normal !important;
+            letter-spacing: 0%;
+          }
+        }
+      }
+    }
+  }
 }
-
-
