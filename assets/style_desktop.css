@@ -15,6 +15,18 @@
 
   header nav.header-nav {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    transform: unset;
+    top: unset;
+    right: unset;
+    left: unset;
+    width: unset;
+
+    opacity: 1;
   }
 
   header .btn-cta {
