@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   * {
     padding: 0;
     margin: 0;
@@ -6,6 +6,7 @@
     color: #282938;
     font-family: "Roboto", sans-serif;
   }
+
   header {
     padding: 24px 84px;
     position: sticky;
@@ -16,16 +17,14 @@
   header nav.header-nav {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     position: relative;
-
     transform: unset;
     top: unset;
     right: unset;
     left: unset;
     width: unset;
-
     opacity: 1;
   }
 
@@ -49,6 +48,7 @@
   #hero-section .hero-section-image {
     width: 50%;
   }
+
   #hero-section .hero-section-image img {
     width: 100%;
   }
@@ -62,6 +62,7 @@
       flex-direction: column;
       gap: 22px;
       margin-bottom: 32px;
+      text-align: left;
     }
   }
 
@@ -80,11 +81,21 @@
   }
 
   .content-text p {
-    /* width: 90%; */
     font-size: 24px;
     font-weight: 300;
     line-height: 150%;
     letter-spacing: 0%;
+  }
+
+  .content-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+  }
+  .btn.btn-solid {
+    width: 30%;
   }
 
   #skills-section {
@@ -95,7 +106,8 @@
   #skills-section .section-content {
     display: flex;
     flex-direction: row;
-    gap: 42px;
+    justify-content:center;
+    gap: 24px;
     margin-top: 106px;
   }
 
@@ -105,6 +117,7 @@
     line-height: 120%;
     letter-spacing: 0;
   }
+
   .section-header .section-header-title {
     font-size: 64px;
     font-weight: 700;
@@ -115,8 +128,9 @@
   .skill-item-text h3 {
     font-size: 32px;
   }
+
   .skill-item-text p {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   #aboutme-section {
@@ -126,23 +140,22 @@
     align-items: center;
   }
 
-  /* content image */
-
   #aboutme-section .aboutme-section-image {
     width: 50%;
   }
+
   #aboutme-section.aboutme-section-image img {
     width: 100%;
   }
 
   #aboutme-section .aboutme-section-content {
     width: 50%;
-    /* margin-left: 40px; */
   }
 
   .content-text h2 {
     font-size: 64px;
   }
+
   .content-text p {
     font-size: 24px;
   }
@@ -171,10 +184,22 @@
     margin-top: 106px;
   }
 
-  .view-dribbble {
-    padding: 14px 22px;
+  .project-item {
+    width: 50%;
   }
 
+  .view-dribbble {
+    background-color: #0077b5; /* LinkedIn Blue */
+    padding: 14px 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
   .view-dribbble p {
     display: block;
     color: white;
@@ -183,12 +208,12 @@
     line-height: 150%;
     letter-spacing: 0%;
   }
-
+  
   .view-dribbble:hover {
-    background-color: #bc1052;
-    transition: 0.3s;
-    border-bottom: 3px solid #e62872;
+    background-color: #005983; /* Darker LinkedIn Blue */
+    border-bottom: 3px solid #0077b5;
   }
+  
 
   .project-item h3 {
     font-size: 32px;
@@ -199,7 +224,6 @@
   }
 
   /* TESTIMONI */
-
   #testi-section {
     padding: 134px 84px;
     background-color: #f5fcff;
@@ -211,12 +235,11 @@
     }
 
     .section-content {
-      display: flex;
-      flex-direction: row;
-      margin-top: 106px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex; /* DIUBAH dari grid ke flex */
+      flex-direction: row; /* DIUBAH dari grid ke flex */
+      flex-wrap: wrap; /* Tambahan agar responsif seperti grid */
       gap: 42px;
+      margin-top: 106px;
     }
 
     .testi-item {
@@ -226,6 +249,7 @@
       padding: 43px;
       border: 1px solid #006b6a;
       border-radius: 10px;
+      flex: 1 1 calc(33.33% - 28px); /* Tambahan agar bisa mirip grid 3 kolom */
 
       .rating {
         width: 50%;
@@ -236,6 +260,7 @@
           color: #006b6a;
         }
       }
+
       p {
         font-family: Roboto;
         font-weight: 400;
@@ -254,7 +279,6 @@
           width: 74px;
           height: 74px;
           border-radius: 100%;
-          /* border: 1px solid black; */
 
           img {
             width: 100%;
